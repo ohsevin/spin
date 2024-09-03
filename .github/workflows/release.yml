@@ -185,7 +185,7 @@ jobs:
         run: echo "RELEASE_VERSION=canary" >> $GITHUB_ENV
 
       - name: download release assets
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spin
 
@@ -213,7 +213,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Download release assets
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spin
 
